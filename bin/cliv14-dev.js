@@ -4,8 +4,6 @@
 
 const program = require('commander');
 
-const validationSassAvailable = require('../lib/utils/validationSassAvailable');
-
 program
   .option('-p, --port <port>', 'server port')
   .option('-h, --host <host>', 'server host')
@@ -22,10 +20,7 @@ const HOST = program.host || process.env.HOST || '0.0.0.0';
 
 const defaultPort = parseInt(DEFAULT_PORT, 10);
 
-validationSassAvailable()
-  .then(() => {
-    return detect(defaultPort);
-  })
+detect(defaultPort)
   .then((newPort) => {
     return new Promise((resolve) => {
       if (newPort === defaultPort) {
@@ -49,7 +44,7 @@ validationSassAvailable()
       } else {
         resolve(null);
       }
-    });
+    })
   })
   .then((port) => {
     const dev = require('../lib/dev');
