@@ -31,7 +31,6 @@
     "file-loader": "5.0.2",
     "html-loader": "0.5.5",
     "html-webpack-plugin": "3.2.0",
-    "http-proxy-middleware": "0.21.0",
     "inquirer": "7.1.0",
     "less": "3.11.1",
     "less-loader": "5.0.0",
@@ -77,5 +76,5 @@
     "start": "http-server ./test/fixtures/ -o -c-1 -p 8081",
     "webpack": "npm run clear && node ./test/compiler.js"
   },
-  "version": "0.0.2"
+  "version": "0.0.5"
 }

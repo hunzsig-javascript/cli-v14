@@ -57,17 +57,11 @@ A cli for js with webpack
 }
 ```
 
-### proxyConfig in package.json
+### proxyConfig in package.json, example:
 ```
 "proxyConfig": {
-  "/api": {
-    "enable": true,
-    "target": "http://your address"
-  },
-  "/api2": {
-    "enable": true,
-    "target": "http://your address2"
-  }
+  "/api": "http://myapi",
+  "/api2": "http://myapi2"
 }
 ```
 
